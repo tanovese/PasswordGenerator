@@ -1,5 +1,13 @@
 // Assignment code here
 
+// function writePassword(passwordLength, includeLowercase, includeUppercase, includeNumeric, includeSpecialCharacters) {
+//   String.fromCharCode(65)
+
+  
+// function arrayLowtoHigh(low, high) {
+
+// }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -12,6 +20,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
