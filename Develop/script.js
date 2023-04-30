@@ -40,34 +40,25 @@ generateBtn.addEventListener("click", windowPrompts);
 
 
 //functions for random characters//
-
-function randomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-
-function randomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-
-function randomNumeric() {
-  const numerics= ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   
-  return numerics[Math.floor(Math.random() * numerics.length)];
-}
+  let numerics =String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 
-function randomSpecial() {
-  const specials= ["!", "@", "#", "$", "%", "&", "*", "?"];
-  
-  return specials[Math.floor(Math.random() * specials.length)];
-}
+  let randomLower = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 
-// function writePassword() {
-//   var password = generatePassword(randomNumeric, randomLower, randomUpper, randomSpecial); {
-//     if randomNumeric.value === true;
-//     return randomNumeric;
-//     if randomLower.value ==true;
-//   }
-//   // have to define generate password
-//   var passwordText = document.querySelector("#password");
-//   passwordText.value = password;
-// }
+  let randomUpper = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+
+  let specials= String.fromCharCode(Math.floor(Math.random() * 6) + 33);
+
+  console.log(numerics);
+
+
+function writePassword() {
+  var password = generatePassword(numerics, randomLower,randomUpper, specials);
+    if (numerics.value === true);{
+      return true;
+    } else {
+    if 
+  }
+  have to define generate password
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
