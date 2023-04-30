@@ -8,23 +8,21 @@ function windowPrompts() {
     alert("Input is invalid");
     return false;
   } else {
-    writePassword();
+    generatePassword();
   }
   if (window.confirm("Would you like to use lowercase?") === true);
-    writePassword();
+    generatePassword();
   if (window.confirm("Would you like to use uppercase?") === true);
-    writePassword();
+    generatePassword();
   if (window.confirm("Would you like to use numeric characters?") === true);
-    writePassword();
+    generatePassword();
   if (window.confirm("Would you like to use special characters?") === true);
-    writePassword();
+    generatePassword();
 }
 
 var generateBtn = document.querySelector("#generate");
 
-generateBtn.addEventListener("click", windowPrompts); {
-  x = x.value;
-}
+generateBtn.addEventListener("click", windowPrompts);
 
 // Write password to the #password input
 // function writePassword() {
@@ -63,13 +61,13 @@ function randomSpecial() {
   return specials[Math.floor(Math.random() * specials.length)];
 }
 
-function writePassword() {
-  var password = generatePassword(randomNumeric, randomLower, randomUpper, randomSpecial); {
-    if randomNumeric.value === true;
-    return randomNumeric;
-    if randomLower.value ==true;
-  }
-  //have to define generate password
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
+// function writePassword() {
+//   var password = generatePassword(randomNumeric, randomLower, randomUpper, randomSpecial); {
+//     if randomNumeric.value === true;
+//     return randomNumeric;
+//     if randomLower.value ==true;
+//   }
+//   // have to define generate password
+//   var passwordText = document.querySelector("#password");
+//   passwordText.value = password;
+// }
