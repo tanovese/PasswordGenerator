@@ -1,32 +1,43 @@
 // Assignment code here
 
+
+
 function windowPrompts() {
+  
   if (window.confirm("Would you like to generate a password?"));
   let passwordLength = prompt("Choose a password length of at least 8 characters and no more than 128 characters");
-  let lowercase= prompt("Do you want to use lowercase?");
-  let uppercase= prompt("Do you want to use uppercase?");
-  let numeric= prompt("Do you want to use numeric characters?");
-  let specialCharacters=prompt("Do you want to use special characters?");
+  if (window.confirm("Do you want to use lowercase?"));
+  if (window.confirm("Do you want to use uppercase?"));
+  if (window.confirm("Do you want to use numeric characters?"));
+  if (window.confirm("Do you want to use special characters?"));
 }
 
-function validatePrompts() {
-  let x = windowPrompts.passwordLength.value;
-  if (x=="") {
-    text= "Input must be filled out"
+function checkEmpty() {
+
+  if (windowPrompts.passwordLength.value === "") {
+    alert("Please enter a value");
+    return false;
   }
-  if (isNaN(x) && x < 8 && x > 128) {
-    text= "Input is not valid";
-  } else {
-    text= "Input submitted";
-  }
+
 }
+
+// let x=passwordLength.value;
+// if (x=="") {
+//   text= "Input must be filled out"
+// }
+// if (isNaN(x) && x < 8 && x > 128) {
+//   text= "Input is not valid";
+// } else {
+//   text= "Input submitted";
+// }
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  windowPrompts()
+  var password = generatePassword(); //have to define generate password
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
