@@ -1,64 +1,75 @@
 // Assignment code here
 
-let passwordLength;
 function windowPrompts() {
-  passwordLength = prompt("Choose a password length of at least 8 characters and no more than 128 characters");
-  console.log(passwordLength)
 
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert("Input must be filled ins");
-    windowPrompts()
+  passwordLength = prompt("Choose a password length of at least 8 characters and no more than 128 characters");
+
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert("Input is invalid");
+    return false;
   } else {
-    writePassword()
+    writePassword();
   }
+  if (window.confirm("Would you like to use lowercase?") === true);
+    writePassword();
+  if (window.confirm("Would you like to use uppercase?") === true);
+    writePassword();
+  if (window.confirm("Would you like to use numeric characters?") === true);
+    writePassword();
+  if (window.confirm("Would you like to use special characters?") === true);
+    writePassword();
 }
 
-generateBtn.addEventListener("click", windowPrompts);
-
-// if (passwordLength.value < 8 && passwordLength.value > 128); {
-//   alert("Input is not valid");
-// }
-
-// isNaN(passwordLength.value) &&
-
-
-function 
-//   if (window.confirm("Do you want to use lowercase?"));
-//   if (window.confirm("Do you want to use uppercase?"));
-//   if (window.confirm("Do you want to use numeric characters?"));
-//   if (window.confirm("Do you want to use special characters?"));
-// }
-
-// function checkEmpty() {
-
-//   if (passwordLength.value === "") {
-//     alert("Please enter a value");
-//     return false;
-//   }
-
-// }
-
-// let x=passwordLength.value;
-// if (x=="") {
-//   text= "Input must be filled out"
-// }
-// if (isNaN(x) && x < 8 && x > 128) {
-//   text= "Input is not valid";
-// } else {
-//   text= "Input submitted";
-// }
-
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  // windowPrompts();
-  // var password = generatePassword(); //have to define generate password
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
+generateBtn.addEventListener("click", windowPrompts); {
+  x = x.value;
 }
 
-// Add event listener to generate button//
+// Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword(length, numbers, specials, lowercaseLetters, uppercaseLetters); {
+//   if (numbers.value === true)
+//     return numericCharacters;
+//   if (specials.value === true)
+//     return specialCharacters;
+//   if (lowercaseLetters.value === true)
+//     return lowercase;
+//   if (uppercaseLetters.value === true)
+//     return uppercase;
+//   }
+// }
+
+
+//functions for random characters//
+
+function randomLower() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+
+function randomUpper() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function randomNumeric() {
+  const numerics= ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  
+  return numerics[Math.floor(Math.random() * numerics.length)];
+}
+
+function randomSpecial() {
+  const specials= ["!", "@", "#", "$", "%", "&", "*", "?"];
+  
+  return specials[Math.floor(Math.random() * specials.length)];
+}
+
+function writePassword() {
+  var password = generatePassword(randomNumeric, randomLower, randomUpper, randomSpecial); {
+    if randomNumeric.value === true;
+    return randomNumeric;
+    if randomLower.value ==true;
+  }
+  //have to define generate password
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
