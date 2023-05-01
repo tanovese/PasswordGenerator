@@ -47,7 +47,7 @@ function generatePassword() {
     return randomUpper;
   } if (specials.value === true) {
     return specials;
-  }
+  } return writePassword();
 }
 
 function writePassword() {
