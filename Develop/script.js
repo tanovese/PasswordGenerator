@@ -1,26 +1,21 @@
 // Assignment code here
 
-function windowPrompts() {
+var passwordLength = prompt("Choose a password length of at least 8 characters and no more than 128 characters");
 
-  passwordLength = prompt("Choose a password length of at least 8 characters and no more than 128 characters");
+var lowercasePrompt= (window.confirm("Would you like to use lowercase?"));
 
-  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-    alert("Input is invalid");
-    return false;
-  } else {
-    writePassword();
-  }
-  if (window.confirm("Would you like to use lowercase?") === true);
-    writePassword();
-  if (window.confirm("Would you like to use uppercase?") === true);
-    writePassword();
-  if (window.confirm("Would you like to use numeric characters?") === true);
-    writePassword();
-  if (window.confirm("Would you like to use special characters?") === true);
-    writePassword();
-}
+var uppercasePrompt= (window.confirm("Would you like to use uppercase?"));
+
+var numericPrompt= (window.confirm("Would you like to use numeric characters?"));
+
+var specialPrompt = (window.confirm("Would you like to use special characters?"));
 
 var generateBtn = document.querySelector("#generate");
+
+// if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+//   alert("Input is invalid");
+//   return false;
+// } else {
 
 generateBtn.addEventListener("click", windowPrompts);
 
@@ -38,15 +33,15 @@ generateBtn.addEventListener("click", windowPrompts);
 
 // have to define generate password //
 
-function generatePassword() {
-  if (numerics.value=== true) {
-    return numerics;
-  } if (randomLower.value === true) {
-    return randomLower;
-  } if (randomUpper.value === true) {
-    return randomUpper;
-  } if (specials.value === true) {
-    return specials;
+function generatePassword() { 
+  if (passwordLength === numerics) {
+    return true;
+  } if (lowercasePrompt === true) {
+    return true;
+  } if (uppercasePrompt === true) {
+    return true;
+  } if (specialPrompt === true) {
+    return true;
   }
 }
 
@@ -56,5 +51,4 @@ function writePassword() {
   if (generatePassword()=== true) {
   return password;
   }
-  
 }
