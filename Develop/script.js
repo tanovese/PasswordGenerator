@@ -8,16 +8,16 @@ function windowPrompts() {
     alert("Input is invalid");
     return false;
   } else {
-    generatePassword();
+    writePassword();
   }
   if (window.confirm("Would you like to use lowercase?") === true);
-    generatePassword();
+    writePassword();
   if (window.confirm("Would you like to use uppercase?") === true);
-    generatePassword();
+    writePassword();
   if (window.confirm("Would you like to use numeric characters?") === true);
-    generatePassword();
+    writePassword();
   if (window.confirm("Would you like to use special characters?") === true);
-    generatePassword();
+    writePassword();
 }
 
 var generateBtn = document.querySelector("#generate");
@@ -47,10 +47,14 @@ function generatePassword() {
     return randomUpper;
   } if (specials.value === true) {
     return specials;
-  } return writePassword();
+  }
 }
 
 function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+  if (generatePassword()=== true) {
+  return password;
+  }
+  
 }
