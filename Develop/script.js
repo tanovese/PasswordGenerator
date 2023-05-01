@@ -24,22 +24,7 @@ var generateBtn = document.querySelector("#generate");
 
 generateBtn.addEventListener("click", windowPrompts);
 
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword(length, numbers, specials, lowercaseLetters, uppercaseLetters); {
-//   if (numbers.value === true)
-//     return numericCharacters;
-//   if (specials.value === true)
-//     return specialCharacters;
-//   if (lowercaseLetters.value === true)
-//     return lowercase;
-//   if (uppercaseLetters.value === true)
-//     return uppercase;
-//   }
-// }
-
-
-//functions for random characters//
+// random character strings //
   
   let numerics =String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 
@@ -51,14 +36,21 @@ generateBtn.addEventListener("click", windowPrompts);
 
   console.log(numerics);
 
+// have to define generate password //
+
+function generatePassword() {
+  if (numerics.value=== true) {
+    return numerics;
+  } if (randomLower.value === true) {
+    return randomLower;
+  } if (randomUpper.value === true) {
+    return randomUpper;
+  } if (specials.value === true) {
+    return specials;
+  }
+}
 
 function writePassword() {
-  var password = generatePassword(numerics, randomLower,randomUpper, specials);
-    if (numerics.value === true);{
-      return true;
-    } else {
-    if 
-  }
-  have to define generate password
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+}
