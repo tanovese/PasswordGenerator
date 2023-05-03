@@ -16,7 +16,7 @@ Click generate password on the webpage and you will be prompted to choose a pass
 
 Screenshot: ![Screenshot of the Password Generator Webpage](./images/Screenshot%202023-05-03%20180638.png)
 
-Link: 
+Link: https://tanovese.github.io/PasswordGenerator/
 
 ## Credits
 
