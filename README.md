@@ -20,7 +20,7 @@ Link: https://tanovese.github.io/PasswordGenerator/
 
 ## Credits
 
-Some of the code in this project was done with the help of Andres Long, a Rutgers BCS tutor.
+Some of the code in this project was done with the help of Andres Long, a Rutgers Coding bootcamp tutor.
 
 ## License
 
